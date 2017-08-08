@@ -14,6 +14,8 @@
 
 #include "vim.h"
 
+#define setpcmark(x)
+
 /*
  * The Visual area is remembered for reselection.
  */

@@ -255,6 +255,10 @@ movemark(int count)
 	jmp = curwin->w_jumplist + curwin->w_jumplistidx;
 	if (jmp->fmark.fnum == 0)
 	    fname2fnum(jmp);
+#if 0
+	if (jmp->fmark.fnum == curbuf->b_fnum)
+	    continue;
+#endif
 	if (jmp->fmark.fnum != curbuf->b_fnum)
 	{
 	    /* jump to other file */
