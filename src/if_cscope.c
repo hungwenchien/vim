@@ -1265,7 +1265,15 @@ cs_find_common(
 		     */
 		    qi = (bt_quickfix(wp->w_buffer) && wp->w_llist_ref != NULL)
 			?  wp->w_llist_ref : wp->w_llist;
-		qf_jump(qi, 0, 0, forceit);
+		if (!use_ll)
+		    qf_jump(qi, 0, 0, forceit);
+		else {
+		    void ex_copen(exarg_T *eap);
+		    exarg_T t;
+		    memset(&t, 0, sizeof(t));
+		    t.cmdidx = CMD_lwindow;
+		    ex_copen(&t);
+		}
 	    }
 	}
 	mch_remove(tmp);
