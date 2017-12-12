@@ -1,5 +1,5 @@
 #!/bin/bash
-./configure --with-features=huge --enable-gui=gtk3 --enable-luainterp --enable-cscope
+./configure --with-features=huge --enable-gui=gtk3 --enable-luainterp --enable-cscope --enable-pythoninterp --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/config
 
 cd src
 make -j8
