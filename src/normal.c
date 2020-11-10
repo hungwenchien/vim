@@ -14,6 +14,8 @@
 
 #include "vim.h"
 
+#define setpcmark(x)
+
 static int	VIsual_mode_orig = NUL;		// saved Visual mode
 static int	restart_VIsual_select = 0;
 

@@ -12,6 +12,8 @@
 
 #include "vim.h"
 
+#define setpcmark(x)
+
 #ifdef FEAT_EVAL
 static void set_vv_searchforward(void);
 static int first_submatch(regmmatch_T *rp);
